@@ -1,92 +1,84 @@
-/* root: all main design tokens stay in one place */
+/* color and font vars for the theme */
 :root {
-  /* main colors */
-  --color-primary: #d73953;
-  --color-black: #090909;
+  --color-primary: #d73953;     /* accent color */
+  --color-black: #090909;       /* main text tone */
   --color-white: #ffffff;
-  --color-light-grey: #f3f3f3;
-  --color-dark-grey: #353535;
-  --text-color: var(--color-black);
+  --color-light-grey: #f3f3f3;  /* light bg */
+  --color-dark-grey: #353535;   /* dark blocks */
+  --text-color: var(--color-black); /* default text */
 
-  /* fonts: families */
-  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font stacks */
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;   /* body stack */
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;    /* heading stack */
 
-  /* fonts: sizes */
-  --font-size-small: 1.2rem;
-  --font-size-medium: 1.6rem;
-  --font-size-large: 1.8rem;
-  --font-size-x-large: 2.3rem;
-  --font-size-xx-large: 4.8rem;
+  /* font sizes */
+  --font-size-small: 1.2rem;     /* small text */
+  --font-size-medium: 1.6rem;    /* normal text */
+  --font-size-large: 1.8rem;     /* slightly bigger */
+  --font-size-x-large: 2.3rem;   /* section titles */
+  --font-size-xx-large: 4.8rem;  /* hero title */
 
-  /* fonts: weights */
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
+  /* font weights */
+  --font-weight-regular: 400;    /* base weight */
+  --font-weight-bold: 700;       /* strong titles */
 
   /* line heights */
-  --line-height-small: 1.2;
-  --line-height-base: 1.5;
-  --line-height-big: 1.8;
+  --line-height-small: 1.2;      /* tight lines */
+  --line-height-base: 1.5;       /* default lines */
+  --line-height-big: 1.8;        /* open lines */
 
-  /* section layout helpers */
-  --section-header-align: center;
-  --section-tagline-transform: uppercase;
-  --section-title-margin: 0;
-  --section-title-color: var(--color-black);
+  /* section header alignment */
+  --section-header-align: center; /* align section titles */
+
+  /* section tagline transform */
+  --section-tagline-transform: uppercase; /* tagline text style */
+
+  /* section title settings */
+  --section-title-margin: 0;                     /* reset title margin */
+  --section-title-color: var(--color-black);     /* title color */
 }
 
-/* smooth scroll and base font sizing */
+/* base scroll and rem scaling */
 html {
-  scroll-behavior: smooth;          /* smooth scroll when clicking nav links */
-  font-size: 62.5%;                 /* so 1rem ~= 10px for easy math */
+  scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
-/* main text: apply base font rules */
+/* main text setup */
 body {
-  color: var(--text-color);         /* main text color */
+  color: var(--text-color);
   font-family: var(--font-family-base);
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-base);
 }
 
-/* links: only real links with href */
+/* base link rule: only anchors with href */
 a[href] {
-  color: var(--text-color);         /* same color as body text */
-  text-decoration: none;            /* no underline by default */
+  color: var(--text-color);
+  text-decoration: none;
+}
+a:visited {
+  font-style: italic;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  background-color: var(--color-light-grey);
 }
 
-/* visited links: mark places we already clicked */
-a[href]:visited {
-  font-style: italic;               /* visited links tilt in italics */
-}
-
-/* hover state: underline only when pointer is on top */
-a[href]:hover {
-  text-decoration: underline;       /* show underline on hover */
-}
-
-/* active state: when clicking down on the link */
-a[href]:active {
-  background-color: var(--color-light-grey);  /* light grey background while active */
-}
-
-/* hide elements visually when needed */
+/* helper to hide elements visually */
 .visually-hidden {
   display: none;
 }
 
-/* service category labels */
-.card-category {
-  color: var(--color-primary);
-}
-
-/* section header alignment */
+/* align section headers using the shared setting */
 .section-header {
   text-align: var(--section-header-align);
 }
 
-/* main section titles */
+/* section title styling */
 .section-title {
   font-family: var(--font-family-title);
   font-size: var(--font-size-xx-large);
@@ -95,10 +87,26 @@ a[href]:active {
   color: var(--section-title-color);
 }
 
-/* small tagline under the section title */
+/* category label accent */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* tagline uses accent, title font, transform, and bold weight */
 .section-tagline {
+  color: var(--color-primary);
   font-family: var(--font-family-title);
   text-transform: var(--section-tagline-transform);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+}
+
+/* headings use title font stack and bold weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold);
 }
