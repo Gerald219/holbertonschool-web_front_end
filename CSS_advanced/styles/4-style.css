@@ -1,0 +1,48 @@
+/* shared vars for colors and fonts */
+:root {
+  --color-primary: #d73953;     /* pink accent */
+  --color-black: #090909;       /* main dark text */
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;  /* soft bg */
+  --color-dark-grey: #353535;   /* darker blocks */
+  --text-color: var(--color-black); /* default text tone */
+
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;  /* body font stack */
+  --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif; /* title font stack */
+}
+
+/* main text uses default tone and base font */
+body {
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+}
+
+/* links follow the same text color */
+a {
+  color: var(--text-color);
+}
+
+/* fully hide things from layout */
+.visually-hidden {
+  display: none;
+}
+
+/* pink label for categories */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* tagline also uses the pink accent */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* headings use the title font stack */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+}
