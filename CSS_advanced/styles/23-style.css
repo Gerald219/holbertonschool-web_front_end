@@ -1,0 +1,16 @@
+@import url("./22-style.css");
+
+/* footer address uses the shared text color variable */
+.footer-address {
+  color: var(--text-color);
+}
+
+/* social links behave as blocks */
+.social-link {
+  display: block;
+}
+
+/* svg icons inside social links use the text color */
+.social-link svg {
+  fill: var(--text-color);
+}
