@@ -1,0 +1,60 @@
+@import url("./29-style.css");
+
+/* outer work card wrapper controls clipping */
+.card-work .card-outer {
+  position: relative;
+  overflow: hidden;
+}
+
+/* work card image fills the card and is cropped nicely */
+.card-work .card-image img {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+/* inner overlay layer on top of the image */
+.card-work .card-inner {
+  position: absolute;
+  top: -0.1rem;
+  left: -0.1rem;
+  right: -0.1rem;
+  z-index: 1;
+}
+
+/* darken overlay when hovering the work card */
+.card-work:hover .card-inner {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* work card title centered in the overlay */
+.card-work .card-title {
+  text-align: center;
+  margin: 0;
+  opacity: 0;
+  height: 100%;
+  position: relative;
+}
+
+/* link inside the work card title */
+.card-work .card-title a {
+  display: block;
+  text-decoration: none;
+  padding-top: 45%;
+}
+
+/* clickable area covers the whole card title zone */
+.card-work .card-title a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* show the title when hovering the work card */
+.card-work:hover .card-title {
+  opacity: 1;
+}
