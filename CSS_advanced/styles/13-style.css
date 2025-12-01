@@ -53,8 +53,8 @@ body {
   line-height: var(--line-height-base);
 }
 
-/* base link rule: only anchors with href */
-a[href] {
+/* links: only actual links (a elements with href) */
+a:link {
   color: var(--text-color);
   text-decoration: none;
 }
