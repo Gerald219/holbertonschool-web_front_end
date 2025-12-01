@@ -10,7 +10,8 @@
   display: block;
 }
 
-/* svg icons inside social links use the text color */
+/* svg icons inside social links use the shared text color */
 .social-link svg {
   fill: var(--text-color);
+  color: var(--text-color);
 }
