@@ -1,0 +1,20 @@
+@import url("./23-style.css");
+
+/* service card titles have no margin */
+.card-services .card-title {
+  margin: 0;
+}
+
+/* service card links are padded blocks with light background */
+.card-services a {
+  display: block;
+  padding: 2rem;
+  background-color: var(--color-light-grey);
+}
+
+/* hover state for service links uses primary background and white text */
+.card-services a:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  text-decoration: none;
+}
