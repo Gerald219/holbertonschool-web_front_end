@@ -12,30 +12,30 @@
   --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;    /* heading stack */
 
   /* font sizes */
-  --font-size-small: 1.2rem;
-  --font-size-medium: 1.6rem;
-  --font-size-large: 1.8rem;
-  --font-size-x-large: 2.3rem;
-  --font-size-xx-large: 4.8rem;
+  --font-size-small: 1.2rem;     /* small text */
+  --font-size-medium: 1.6rem;    /* normal text */
+  --font-size-large: 1.8rem;     /* slightly bigger */
+  --font-size-x-large: 2.3rem;   /* section titles */
+  --font-size-xx-large: 4.8rem;  /* hero title */
 
   /* font weights */
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
+  --font-weight-regular: 400;    /* base weight */
+  --font-weight-bold: 700;       /* strong titles */
 
   /* line heights */
-  --line-height-small: 1.2;
-  --line-height-base: 1.5;
-  --line-height-big: 1.8;
+  --line-height-small: 1.2;      /* tight lines */
+  --line-height-base: 1.5;       /* default lines */
+  --line-height-big: 1.8;        /* open lines */
 
   /* section header alignment */
-  --section-header-align: center;
+  --section-header-align: center; /* align section titles */
 
   /* section tagline transform */
-  --section-tagline-transform: uppercase;
+  --section-tagline-transform: uppercase; /* tagline text style */
 
   /* section title settings */
-  --section-title-margin: 0;
-  --section-title-color: var(--color-black);
+  --section-title-margin: 0;                     /* reset title margin */
+  --section-title-color: var(--color-black);     /* title color */
 }
 
 /* base scroll and rem scaling */
@@ -58,19 +58,13 @@ a[href] {
   color: var(--text-color);
   text-decoration: none;
 }
-
-/* visited links with href */
-a[href]:visited {
+a:visited {
   font-style: italic;
 }
-
-/* hover underline for href links */
-a[href]:hover {
+a:hover {
   text-decoration: underline;
 }
-
-/* active href link background */
-a[href]:active {
+a:active {
   background-color: var(--color-light-grey);
 }
 
