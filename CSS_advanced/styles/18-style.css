@@ -160,16 +160,16 @@ a[href]:active {
   float: right;
 }
 
-/* nav resets list styling and centers its content */
-nav {
+/* nav list with class .nav: reset list styling and center content */
+.nav {
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
 }
 
-/* individual nav items inside nav use shared nav variables */
-nav .nav-item {
+/* nav items inside .nav use shared nav variables */
+.nav .nav-item {
   font-family: var(--nav-item-font-family);
   font-weight: var(--nav-item-font-weight);
   font-size: var(--nav-item-font-size);
@@ -179,13 +179,13 @@ nav .nav-item {
 }
 
 /* nav links are blocks with padding so they are easy to click */
-nav .nav-link {
+.nav .nav-link {
   display: block;
   padding: 0.5rem 1rem;
 }
 
 /* nav links change color on hover using the nav item hover color */
-nav .nav-link:hover {
+.nav .nav-link:hover {
   color: var(--nav-item-link-hover);
 }
 
