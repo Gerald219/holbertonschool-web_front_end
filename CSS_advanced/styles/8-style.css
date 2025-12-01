@@ -1,0 +1,75 @@
+/* color and font vars for the theme */
+:root {
+  --color-primary: #d73953;     /* accent color */
+  --color-black: #090909;       /* main text tone */
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;  /* light bg */
+  --color-dark-grey: #353535;   /* dark blocks */
+  --text-color: var(--color-black); /* default text */
+
+  /* font stacks */
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;   /* body stack */
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;    /* heading stack */
+
+  /* font sizes */
+  --font-size-small: 1.2rem;     /* small text */
+  --font-size-medium: 1.6rem;    /* normal text */
+  --font-size-large: 1.8rem;     /* slightly bigger */
+  --font-size-x-large: 2.3rem;   /* section titles */
+  --font-size-xx-large: 4.8rem;  /* hero title */
+
+  /* font weights */
+  --font-weight-regular: 400;    /* base weight */
+  --font-weight-bold: 700;       /* strong titles */
+
+  /* line heights */
+  --line-height-small: 1.2;      /* tight lines */
+  --line-height-base: 1.5;       /* default lines */
+  --line-height-big: 1.8;        /* open lines */
+}
+
+/* base scroll and rem scaling */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* main text setup */
+body {
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base); /* use base line height */
+}
+
+/* links reuse main text color */
+a {
+  color: var(--text-color);
+}
+
+/* helper to hide elements visually */
+.visually-hidden {
+  display: none;
+}
+
+/* category label accent */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* tagline accent */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* headings use title font stack and bold weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold);
+}
