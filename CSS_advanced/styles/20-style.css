@@ -1,0 +1,9 @@
+/* import previous file */
+@import url("./19-style.css");
+
+/* after every .row, clear floats */
+.row::after {
+  content: "";          /* no content */
+  display: table;       /* create a new block formatting context */
+  clear: both;          /* stop floats on both sides */
+}
