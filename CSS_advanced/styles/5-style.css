@@ -1,55 +1,56 @@
-/* shared vars for colors and fonts */
+/* color and font vars for the theme */
 :root {
-  --color-primary: #d73953;     /* pink accent */
-  --color-black: #090909;       /* main dark text */
+  --color-primary: #d73953;     /* accent color */
+  --color-black: #090909;       /* main text tone */
   --color-white: #ffffff;
-  --color-light-grey: #f3f3f3;  /* soft bg */
-  --color-dark-grey: #353535;   /* darker blocks */
-  --text-color: var(--color-black); /* default text tone */
+  --color-light-grey: #f3f3f3;  /* light bg */
+  --color-dark-grey: #353535;   /* dark blocks */
+  --text-color: var(--color-black); /* default text */
 
-  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;  /* body font stack */
-  --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif; /* title font stack */
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;  /* body stack */
+  --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif; /* heading stack */
 
   --font-size-small: 1.2rem;     /* small text */
   --font-size-medium: 1.6rem;    /* normal text */
-  --font-size-large: 1.8rem;     /* a bit bigger */
-  --font-size-x-large: 2.3rem;   /* big titles */
+  --font-size-large: 1.8rem;     /* slightly bigger */
+  --font-size-x-large: 2.3rem;   /* section titles */
   --font-size-xx-large: 4.8rem;  /* hero title */
 }
 
-/* base size so 1rem = 10px */
+/* base scroll and rem scaling */
 html {
-  font-size: 62.5%;  /* easier rem math */
+  scroll-behavior: smooth;   /* smooth scroll everywhere */
+  font-size: 62.5%;          /* 1rem = 10px */
 }
 
-/* main text uses default tone, base font and medium size */
+/* main text setup */
 body {
   color: var(--text-color);
   font-family: var(--font-family-base);
   font-size: var(--font-size-medium);
 }
 
-/* links follow the same text color */
+/* links reuse main text color */
 a {
   color: var(--text-color);
 }
 
-/* fully hide things from layout */
+/* helper to hide elements visually */
 .visually-hidden {
   display: none;
 }
 
-/* pink label for categories */
+/* category label accent */
 .card-category {
   color: var(--color-primary);
 }
 
-/* tagline also uses the pink accent */
+/* tagline accent */
 .section-tagline {
   color: var(--color-primary);
 }
 
-/* headings use the title font stack */
+/* headings use title font stack */
 h1,
 h2,
 h3,
