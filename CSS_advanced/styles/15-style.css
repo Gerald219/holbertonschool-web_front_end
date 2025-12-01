@@ -1,0 +1,126 @@
+/* reset browser defaults using normalize.css v8.0.1 */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+
+/* color and font vars for the theme */
+:root {
+  --color-primary: #d73953;     /* accent color */
+  --color-black: #090909;       /* main text tone */
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;  /* light bg */
+  --color-dark-grey: #353535;   /* dark blocks */
+  --text-color: var(--color-black); /* default text */
+
+  /* font stacks */
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;   /* body stack */
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;    /* heading stack */
+
+  /* font sizes */
+  --font-size-small: 1.2rem;     /* small text */
+  --font-size-medium: 1.6rem;    /* normal text */
+  --font-size-large: 1.8rem;     /* slightly bigger */
+  --font-size-x-large: 2.3rem;   /* section titles */
+  --font-size-xx-large: 4.8rem;  /* hero title */
+
+  /* font weights */
+  --font-weight-regular: 400;    /* base weight */
+  --font-weight-bold: 700;       /* strong titles */
+
+  /* line heights */
+  --line-height-small: 1.2;      /* tight lines */
+  --line-height-base: 1.5;       /* default lines */
+  --line-height-big: 1.8;        /* open lines */
+
+  /* section header alignment */
+  --section-header-align: center; /* align section titles */
+
+  /* section tagline transform */
+  --section-tagline-transform: uppercase; /* tagline text style */
+
+  /* section title settings */
+  --section-title-margin: 0;                     /* reset title margin */
+  --section-title-color: var(--color-black);     /* title color */
+}
+
+/* use border-box for all elements so layouts are easier to control */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* base scroll and rem scaling */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* main text setup */
+body {
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+}
+
+/* links reuse main text color and drop decoration for real hyperlinks only */
+a[href] {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* visited links look different: italic text */
+a[href]:visited {
+  font-style: italic;
+}
+
+/* when hovering, show underline so it feels clickable */
+a[href]:hover {
+  text-decoration: underline;
+}
+
+/* while clicking, give a soft background highlight */
+a[href]:active {
+  background-color: var(--color-light-grey);
+}
+
+/* helper to hide elements visually */
+.visually-hidden {
+  display: none;
+}
+
+/* align section headers using the shared setting */
+.section-header {
+  text-align: var(--section-header-align);
+}
+
+/* section title styling */
+.section-title {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-xx-large);
+  font-weight: var(--font-weight-bold);
+  margin: var(--section-title-margin);
+  color: var(--section-title-color);
+}
+
+/* category label accent */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* tagline uses accent, title font, transform, and bold weight */
+.section-tagline {
+  color: var(--color-primary);
+  font-family: var(--font-family-title);
+  text-transform: var(--section-tagline-transform);
+  font-weight: var(--font-weight-bold);
+}
+
+/* headings use title font stack and bold weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold);
+}
