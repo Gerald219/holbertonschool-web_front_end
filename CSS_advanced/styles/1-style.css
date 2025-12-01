@@ -1,0 +1,4 @@
+/* makes scrolling smooth across the whole page */
+html {
+  scroll-behavior: smooth; /* soft sliding effect when user scrolls */
+}
