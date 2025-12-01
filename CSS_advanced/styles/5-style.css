@@ -1,0 +1,60 @@
+/* shared vars for colors and fonts */
+:root {
+  --color-primary: #d73953;     /* pink accent */
+  --color-black: #090909;       /* main dark text */
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;  /* soft bg */
+  --color-dark-grey: #353535;   /* darker blocks */
+  --text-color: var(--color-black); /* default text tone */
+
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;  /* body font stack */
+  --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif; /* title font stack */
+
+  --font-size-small: 1.2rem;     /* small text */
+  --font-size-medium: 1.6rem;    /* normal text */
+  --font-size-large: 1.8rem;     /* a bit bigger */
+  --font-size-x-large: 2.3rem;   /* big titles */
+  --font-size-xx-large: 4.8rem;  /* hero title */
+}
+
+/* base size so 1rem = 10px */
+html {
+  font-size: 62.5%;  /* easier rem math */
+}
+
+/* main text uses default tone, base font and medium size */
+body {
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+}
+
+/* links follow the same text color */
+a {
+  color: var(--text-color);
+}
+
+/* fully hide things from layout */
+.visually-hidden {
+  display: none;
+}
+
+/* pink label for categories */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* tagline also uses the pink accent */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* headings use the title font stack */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+}
