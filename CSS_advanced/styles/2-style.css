@@ -1,0 +1,24 @@
+/* main text color */
+body {
+  color: #161616; /* dark foreground */
+}
+
+/* anchor elements use the same dark color */
+a {
+  color: #161616; /* matching text tone */
+}
+
+/* hides elements that should not appear visually */
+.visually-hidden {
+  display: none; /* fully hidden */
+}
+
+/* pink color for category labels */
+.card-category {
+  color: #D73953; /* project accent color */
+}
+
+/* pink color for taglines */
+.section-tagline {
+  color: #D73953; /* consistent accent */
+}
